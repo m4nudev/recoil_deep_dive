@@ -12,7 +12,7 @@ function MainApp() {
   const networkNotificationCount = useRecoilValue(networkAtom);
   const jobsAtomCount = useRecoilValue(jobsAtom);
   const notificationAtomCount = useRecoilValue(notificationsAtom);
-  const MessagingAtomCount = useRecoilValue(messagingAtom);
+  const messagingAtomCount = useRecoilValue(messagingAtom);
   const totalNotificationCount = useRecoilValue(totalNotificationSelector)
 
   return (
@@ -20,8 +20,9 @@ function MainApp() {
     <button>Home</button>
   
     <button>My network ({networkNotificationCount >= 100 ? "99+" : networkNotificationCount})</button>
+    
     <button>Jobs ({jobsAtomCount})</button>
-    <button>Messaging ({MessagingAtomCount})</button>
+    <button>Messaging ({messagingAtomCount})</button>
     <button>Notifications ({notificationAtomCount})</button>
  
     <button>Me ({totalNotificationCount})</button>
